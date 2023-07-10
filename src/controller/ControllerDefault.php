@@ -2,20 +2,26 @@
 
 namespace App\PGVM\controller;
 
-
-class ControllerDefault
+/**
+ * Controller permettant la navigation du site
+ */
+class ControllerDefault extends AbstractController
 {
-    //affiche une vue selon un chemin et des paramètres qui seront transfomés en variables
-    private static function afficheVue(string $cheminVue, array $parametres = []) : void {
-        extract($parametres); // Crée des variables à partir du tableau $parametres
-        require __DIR__ . "/../view/$cheminVue"; // Charge la vue
-
-    }
-
     public static function login(){
         self::afficheVue('login.php', ['pagetitle' => 'Login']);
     }
     public static function error(){
         self::afficheVue('error.php', ['pagetitle'=>'Error 404']);
+    }
+    public static function main(){
+        self::afficheVue('view.php',["pagetitle"=>"Home","componentPath"=>"main.php"]);
+    }
+
+    public static function AVenirForm(){
+        self::afficheVue('view.php', ["pagetitle"=>"Visites A Venir", "componentPath"=>"AVenir.php"]);
+    }
+
+    public static function historiqueForm(){
+        self::afficheVue('view.php',["pagetitle"=>"Historique","componentPath"=>"historique.php"]);
     }
 }

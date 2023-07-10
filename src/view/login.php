@@ -9,6 +9,11 @@
     <link rel="stylesheet" href="./css/login_style.css">
 </head>
 <body>
+    <?php
+    if(isset($errorComponent)){
+        require __DIR__."/{$errorComponent}";
+    }
+    ?>
     <form method="GET" action="index.php">
         <input type="hidden" name="action" value="connexionUtilisateur">
         <input type="hidden" name="controller" value="utilisateur">

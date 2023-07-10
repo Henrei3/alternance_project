@@ -1,9 +1,13 @@
 <?php
 namespace App\PGVM\model\DataObject;
 
+/**
+ * Classe essentielle pour l'implémentation du MVC pattern.
+ * Elle permet de manipuler de manière plus organisée la base de données.
+ */
 class Utilisateur
 {
-
+    public string $u_id;
     public string $nom;
     public string $prenom;
     public string $password;
@@ -17,15 +21,22 @@ class Utilisateur
      * @param string $email
      * @param string $user_group
      */
-    public function __construct(string $nom, string $prenom, string $email, string $user_group)
+    public function __construct($row)
     {
-        $this->nom = $nom;
-        $this->prenom = $prenom;
-        $this->email = $email;
-        $this->user_group = $user_group;
+        $this->u_id = $row['u_id'];
+        $this->nom = $row['nom'];
+        $this->prenom = $row['prenom'];
+        $this->email = $row['email'];
+        $this->user_group = $row['user_group'];
     }
 
-
+    /**
+     * @param string $u_id
+     */
+    public function setUId(string $u_id): void
+    {
+        $this->u_id = $u_id;
+    }
     /**
      * @param string $nom
      */
@@ -64,6 +75,14 @@ class Utilisateur
     public function setUserGroup(string $user_group): void
     {
         $this->user_group = $user_group;
+    }
+
+    /**
+     * @return string
+     */
+    public function getUId(): string
+    {
+        return $this->u_id;
     }
 
     /**

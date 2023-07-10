@@ -5,6 +5,10 @@ namespace App\PGVM\model\Repository;
 use App\PGVM\model\Repository\DatabaseConnexion;
 use PDOException;
 
+/**
+ * Cette classe permet la creation des tables nécessaires pour le fonctionnement du site
+ * Dans le cas ou elles ne soient pas existantes.
+ */
 class SetUpDatabase
 {
     public static function setUp(){

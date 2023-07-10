@@ -14,6 +14,14 @@ use PDOException;
  * </p>
  */
 
+/**
+ * Cette classe permet la connexion avec la base de données.
+ *
+ * Si la connexion avec la base de données primaire : {@link Conf} échue.
+ * {@link DatabaseConnexion} se connecte avec la deuxième base de données {@link ConfLocal}
+ *
+ * Cette classe implémente le Singleton Pattern pour une utilisation optimisée de la base de donées.
+ */
 class DatabaseConnexion
 
 {
@@ -24,6 +32,7 @@ class DatabaseConnexion
     public static function getPdo(): PDO{
         return self::getInstance()-> pdo;
     }
+    // Gestion de connexion et échec de connexion des bases de données
     private function __construct()
     {
         $hostname = Conf::getHostname();
@@ -57,6 +66,7 @@ class DatabaseConnexion
         }
         return true;
     }
+
     public static function getInstance() :DatabaseConnexion{
         if (is_null(self::$instance)){
             self::$instance = new DatabaseConnexion();

@@ -5,13 +5,24 @@ namespace App\PGVM\model\DataObject;
 use App\PGVM\model\Repository\VisiteMedicaleRepository;
 /**
  * Cette classe facilite la manipulation de données dedans l'application.
- * Elle est directement connectée avec {@link VisiteMedicaleRepository}
+ *
  */
 
 class VisiteMedicale
 {
     public $user_id;
     public $date;
+
+    /**
+     * @param $user_id
+     * @param $date
+     */
+    public function __construct($visite_row)
+    {
+        $this->user_id = $visite_row['u_id'];
+        $this->date = $visite_row['date'];
+    }
+
 
     /**
      * @return mixed

@@ -1,3 +1,10 @@
+@import url('https://fonts.googleapis.com/css2?family=Source+Code+Pro&display=swap');
+
+body{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
 nav {
     background-color: #7BB4FB;
     width: 100%;
@@ -15,41 +22,120 @@ nav div{
     align-items: center;
 
 }
-nav div h4{
-    margin: 0px 0em 0px 3em;
+nav div a {
+    margin: 0 3rem 0 0;
 }
-nav div img {
-    margin: 0px 2em 0px 2em;
-}
+
 #logo{
     max-height: 90px;
     max-width: 136px;
+    margin: 0 0 0 0;
+
 }
 #addEmployee{
     max-height: 60px;
     max-width: 90px;
 }
-body > div{
+main > div{
     background-color: #2F8BFA;
-    height: 88vh;
+    height: 89vh;
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: center;
     color: white;
 }
-
-div > div {
+h1{
+    margin-bottom: 5rem;
+    margin-top: 0;
+    font-size: 35px;
+    letter-spacing: -1px;
+}
+a > div {
     width: 536px;
     height: 75px;
     background-color: #264C7A;
     border-radius: 5em;
-    margin-top: 5rem;
+    font-size: 23px;
+    letter-spacing: -0.3px;
     display: flex;
     justify-content: center;
     align-items: center;
     transition: all 0.5s;
 }
-div > div:hover {
+a > div:hover {
     background-color: white;
+    color: #264C7A;
+}
+a{
+    text-decoration: none;
+    color: white;
+    transition: all 0.2s;
+}
+a:hover{
     color: black;
+}
+.notification{
+    width: 100%;
+    height: 5vh;
+    background-color:#4B607A;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.row {
+    display: flex;
+    background-color: #7BB4FB;
+    width: 70vw;
+}
+.row:nth-child(even){
+    background-color: #264C7A;
+}
+.column {
+    flex: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.inner_inputs{
+
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+
+}
+.send{
+    text-align: center;
+}
+form{
+    width: 70vw;
+    height: 40vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+input, select {
+    font-family: 'Source Code Pro', monospace;
+    width: 140px;
+    height: 50px;
+    text-align: center;
+    font-size: 17px;
+    border-style:solid;
+    border-color: black;
+    border-width: 4px;
+    background-color: white;
+    transition: background-color 0.3s;
+}
+.send input:hover{
+    background-color: rgba(168, 168, 168, 0.6);
+}
+
+form > input{
+    margin-bottom: 20px;
+}
+
+input{
+    font-family: 'Source Code Pro', monospace;
 }

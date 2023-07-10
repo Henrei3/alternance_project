@@ -4,7 +4,7 @@ namespace App\PGVM\config;
 
 /**
  * Cette classe est la classe config appartenant au Localhost
- * Dans le cas ou la connexion à certaine base de données ne soit pas réussi ce fichier Conf
+ * Dans le cas ou la connexion à certaine base de données ne soit pas réussi, ce fichier Conf
  * pourra les remplacer.
  */
 class ConfLocal
