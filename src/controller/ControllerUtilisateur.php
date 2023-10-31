@@ -5,9 +5,6 @@ namespace App\PGVM\controller;
 use App\PGVM\Lib\EmailEnvoie;
 use App\PGVM\model\Repository\UtilisateurRepository;
 
-DEFINE ('SALT_SUFFIX', 'wsh6759n' );
-DEFINE ('SALT_PREFIX', 'hsgt49U2');
-
 class ControllerUtilisateur extends AbstractController
 {
 

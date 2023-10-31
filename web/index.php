@@ -36,7 +36,6 @@ if (isset($_GET['action'])){
     }
 }
 else {
-    SetUpDatabase::setUp();
     ControllerDefault::login();
 }
 
